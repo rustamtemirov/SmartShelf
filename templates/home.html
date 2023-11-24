@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <h2>Welcome to Smart Shelf</h2>
+    <p>Introducing a smart solution for organizing and managing your items on the shelf.</p>
+</section>
+<section>
+    <a href="{{ url_for('register.signup') }}">Sign Up</a>
+    <a href="{{ url_for('register.login') }}">Login</a>
+</section>
+{% endblock %}
