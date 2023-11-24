@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Main - Smart Shelf{% endblock %}
+
+{% block content %}
+<section>
+    <h2>Main Page</h2>
+    <p>Welcome, {{ current_user.username }}!</p>
+    <ul>
+        {% for shelf in shelves %}
+            <li>{{ shelf.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
+<section>
+    <a href="{{ url_for('create_shelf') }}">Create a Shelf</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</section>
+{% endblock %}
